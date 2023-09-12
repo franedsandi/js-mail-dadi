@@ -21,14 +21,12 @@
   margin: 10px;
   font-weight: 500;
   border: 5px solid black;
+  background-color: #0cd6a1;
 }
 #email{
   width: 390px;
 }
-/* background fizz , buzz and fizzbuzz */
-.box.user{
-  background-color: #0cd6a1;
-}
-.box.computer{
-  background-color: #ffd166;
+.winner{ 
+  font-size: 50px;
+  color: white;
 }

@@ -10,20 +10,22 @@
 </head>
 <body>
   <div class="container">
-    <div class="card my-3 ">
+    <div id="firstcard" class="card my-3 ">
       <div class="card-body d-flex flex-column align-items-center">
         <h5 class="card-title fs-1">Welcome to the most borring Casino online</h5>
         <div class="outputwelcome"></div>
-        <div class="emailpicker">
+        <div class="emailpicker d-flex flex-column align-items-center">
           <input id="email" type="email" class="form-control" placeholder="Pleace incert your e-mail to validate your invitation" aria-label="email">
+          <div id="btn-1" type="submit" class="btn btn-outline-success">Send</div>
         </div>
-        
-        <div id="btn-1" type="submit" class="btn btn-outline-success">Send</div>
+        <div id="btn-2" type="submit" class="btn btn-outline-success d-none ">play</div>
       </div>
     </div>
-    <div id="game" class="card my-3 ">
-      <div class="card-body d-flex justify-content-center align-items-center gap-3">
-      </div>
+    <div id="game" class="d-none text-center text-white">
+      <div class="winner"></div>
+      <div class="dadi d-flex justify-content-center gap-3"></div>
+      <div id="btn-3" type="submit" class="btn btn-outline-success ">play again</div>
+
     </div>
   </div>
   

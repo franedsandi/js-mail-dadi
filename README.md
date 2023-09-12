@@ -19,13 +19,16 @@ Consigli del giorno:
 Buon lavoro e buon divertimento! 
 
 ===
-1. chiede al utente la mail in un form
-1. controllare che sia presente sulla lista di invitati javascript (array)
-1. if yes = message = welcome we were waiting for you
-1. if not = sorry you are not invited , get away
+1. chiede al utente la mail in un form y
+1. controllare che sia presente sulla lista di invitati javascript (array) y
+1. if yes = message = welcome we were waiting for you y
+1. if not = sorry you are not invited , get away y
 ===
-1. generare un numero casuale tra 1-6 per l'utente
-1. generare un numero casuale (2) per il computer
-1. comparare numero casuale con numero casuale 2
+1. generare un numero casuale tra 1-6 per l'utente y
+1. generare un numero casuale (2) per il computer y
+1. comparare numero casuale con numero casuale 2 y
 1. se numero casuela 1 > numero casuale (computer wins)
 se numero casuela 1 < numero casuale (utente ( nome preso dalla prima parte ) wins)
+===
+valid emails:
+'franedsandi@gmail.com','hello@hotmail.com', 'hi@hotmail.com', 'Inter@hotmail.com','youtube@hotmail.com', 'google@hotmail.com', 'pavia@hotmail.com', 'hello@gmail.com', 'hi@gmail.com', 'Inter@gmail.com', 'youtube@gmail.com', 'google@gmail.com', 'pavia@gmail.com'
