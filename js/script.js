@@ -1,4 +1,3 @@
-
 /* invited list */
 const invited = {
   'franedsandi@gmail.com': true,
@@ -19,7 +18,7 @@ const invited = {
 const button1 = document.getElementById('btn-1');
 const button2 = document.getElementById('btn-2');
 const button3 = document.getElementById('btn-3');
-
+/* email picker */
 button1.addEventListener('click', function() {
     const emailInput = document.getElementById('email').value;
     const outputWelcome = document.querySelector('.outputwelcome');
@@ -35,6 +34,8 @@ button1.addEventListener('click', function() {
           welcomecard.classList.add('d-none');
           const gamecard = document.getElementById('game');
           gamecard.classList.remove('d-none');
+          button2.classList.add('d-none'); // Ocultar btn-2 al finalizar la ronda
+          button3.classList.remove('d-none'); // Mostrar btn-3 al finalizar la ronda
         })
     } else {
         outputWelcome.textContent = 'Invalid email. You are not invited.';
@@ -79,3 +80,41 @@ if (firstBoxValue > secondBoxValue) {
 } else {
   winnerMessage.textContent = "It's a tie!";
 }
+
+button3.addEventListener('click', function() {
+  dadiContainer.innerHTML = ''; 
+  for (let i = 0; i <= 1; i++) {
+    const boxContainer = document.createElement('div');
+    boxContainer.classList.add('box-container');
+    dadiContainer.append(boxContainer);
+  
+    const box = document.createElement('div');
+    box.classList.add('box');
+    boxContainer.append(box);
+  
+    const min = 1;
+    const max = 6;
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    box.textContent = randomNumber;
+  
+    if (i === 0) {
+      firstBoxValue = randomNumber;
+      const userText = document.createElement('div');
+      userText.textContent = 'you';
+      boxContainer.append(userText);
+    } else {
+      secondBoxValue = randomNumber;
+      const pcText = document.createElement('div');
+      pcText.textContent = 'casino';
+      boxContainer.append(pcText);
+    }
+  }
+  const winnerMessage = document.querySelector('.winner');
+if (firstBoxValue > secondBoxValue) {
+  winnerMessage.textContent ='You win!';
+} else if (firstBoxValue < secondBoxValue) {
+  winnerMessage.textContent = 'The most boring Casino online wins!';
+} else {
+  winnerMessage.textContent = "It's a tie!";
+}
+});
